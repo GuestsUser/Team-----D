@@ -21,13 +21,13 @@ public class CoinPlaceStage1 : MonoBehaviour
             GameObject obj = Instantiate(coin);
             obj.transform.position = new Vector3(radius * Mathf.Cos(angle), obj.transform.localScale.y*0.5f, radius * Mathf.Sin(angle));
             obj.transform.Rotate(345,320,54);
-            obj.transform.parent = panel.transform;
+            obj.transform.parent = transform;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.rotation = panel.transform.rotation;
     }
 }
