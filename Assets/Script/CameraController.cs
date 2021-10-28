@@ -60,10 +60,6 @@ public class CameraController : MonoBehaviour
 
         float deltaSpeed = m_speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, deltaSpeed);
-
-        Vector3 pos = m_cameraTransform.position;
-        pos.y = 10.0f;
-        m_cameraTransform.position = pos;
     }
 
 }   //参考：https://www.urablog.xyz/entry/2017/10/09/093920

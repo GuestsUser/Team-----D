@@ -9,6 +9,9 @@ public class CameraLockY : CinemachineExtension
     [Tooltip("カメラのY座標を固定する値")]
     public float m_YPosition = 10;
 
+    [Tooltip("カメラの回転を固定する値")]
+    public float m_RotePosition;
+
     protected override void PostPipelineStageCallback(
         CinemachineVirtualCameraBase vcam,
         CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
@@ -19,5 +22,10 @@ public class CameraLockY : CinemachineExtension
             pos.y = m_YPosition;
             state.RawPosition = pos;
         }
+    }
+
+    void Update()
+    {
+        this.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }
