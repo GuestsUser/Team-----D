@@ -620,7 +620,7 @@ PrefabInstance:
       value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 6843273994735271491, guid: 8d534fca44bbb064a8b9e316ab29f559, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8d534fca44bbb064a8b9e316ab29f559, type: 3}
 --- !u!1 &410910078
 GameObject:
@@ -683,7 +683,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.8484108, y: 1}
+    m_SensorSize: {x: 1.2466793, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1191,18 +1191,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 383693696}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1184299572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184299571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe3e7b9b9bfda242b19094928b1d876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1332220218
 GameObject:
   m_ObjectHideFlags: 0
