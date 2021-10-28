@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6843273994735271489}
   - component: {fileID: 6843273994735271488}
   - component: {fileID: 6843273994735271519}
-  - component: {fileID: 6843273994735271491}
+  - component: {fileID: 8366877137427557421}
   - component: {fileID: 4985855192063934965}
   m_Layer: 0
   m_Name: Ground
@@ -96,7 +96,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &6843273994735271491
+--- !u!114 &8366877137427557421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,12 +105,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6843273994735271518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c52bc08db7fe94bb27475378819caa, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fe3e7b9b9bfda242b19094928b1d876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinAngle: -30
-  MaxAngle: 30
-  rotationSpeed: 0.1
 --- !u!54 &4985855192063934965
 Rigidbody:
   m_ObjectHideFlags: 0
