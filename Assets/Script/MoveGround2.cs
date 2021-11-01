@@ -10,6 +10,7 @@ public class MoveGround2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         // 左右キーの入力を取得
         float horizontal = Input.GetAxis("Horizontal")*-1;
         //上下キーの入力を取得
@@ -124,7 +125,7 @@ public class MoveGround2 : MonoBehaviour
         {
             if (currentZAngle > -30)
             {
-                z += Time.deltaTime * -20;
+                z += Time.deltaTime * -20f;
 
             }
             else
