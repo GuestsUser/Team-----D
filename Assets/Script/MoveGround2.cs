@@ -7,18 +7,28 @@ public class MoveGround2 : MonoBehaviour
     float x;
     float z;
 
+    // GameObjectのZ軸方向の角度を取得
+   public float currentZAngle;
+    //GameObjectのX軸方向の角度を取得
+   public  float currentXAngle;
+
+    void Start()
+    {
+        currentZAngle = transform.eulerAngles.z;
+        currentXAngle = transform.eulerAngles.x;
+    }
+
     // Update is called once per frame
     void Update()
     {
+
         // 左右キーの入力を取得
         float horizontal = Input.GetAxis("Horizontal")*-1;
         //上下キーの入力を取得
         float vertical = Input.GetAxis("Vertical");
 
-        // 現在のGameObjectのZ軸方向の角度を取得
-        float currentZAngle = transform.eulerAngles.z;
-        //現在のGameObjectのX軸方向の角度を取得
-        float currentXAngle = transform.eulerAngles.x;
+        currentZAngle = transform.eulerAngles.z;
+        currentXAngle = transform.eulerAngles.x;
 
         //現在の角度が180より大きい場合
         if (currentXAngle > 180)
@@ -124,7 +134,7 @@ public class MoveGround2 : MonoBehaviour
         {
             if (currentZAngle > -30)
             {
-                z += Time.deltaTime * -20;
+                z += Time.deltaTime * -20f;
 
             }
             else

@@ -1,12 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void ButtonExit()
+    public void OnClick()
     {
+        StartCoroutine(Timer());
+    }
+
+    private IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(1.0f);
+
         Application.Quit();
     }
 }

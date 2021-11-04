@@ -16,6 +16,7 @@ public class UI_pause : MonoBehaviour
     int Menu_Num = 0;
     bool Push_flag = false;
     int Event;
+    private bool inGame;
 
 
     [SerializeField]
@@ -28,11 +29,17 @@ public class UI_pause : MonoBehaviour
 
     public object Button1 { get; private set; }
 
-    private void Start() { pauseUI.SetActive(false); }
+   // private void Start() {  }
 
+    void Start()
+    {
+        pauseUI.SetActive(false);
+        Invoke("Update", 4);
+    }
     // Update is called once per frame
+  
 
-    public void Update()
+    void Update()
     {
         
         if (Input.GetKeyDown("joystick button 7"))
@@ -83,7 +90,9 @@ public class UI_pause : MonoBehaviour
         //        Menubur.position += new Vector3(0, 60, 0);
         //    }
         //}
+        
     }
+  
 }
 
 

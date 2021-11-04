@@ -10,11 +10,11 @@ public class UIposittion : MonoBehaviour
     [SerializeField] Text text;
     GameObject selectedObj;
 
-     
 
-    public  void UI()
+
+    public void UI()
     {
         selectedObj = eventSystem.currentSelectedGameObject.gameObject;
-        transform.position = new Vector3(transform.position.x, selectedObj.transform.position.y,transform.position.z);
+        transform.position = new Vector3(transform.position.x, selectedObj.transform.position.y, transform.position.z);
     }
 }
