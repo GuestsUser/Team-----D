@@ -1,0 +1,9 @@
+diff a/Assets/Scenes/Build/GameMain.unity b/Assets/Scenes/Build/GameMain.unity	(rejected hunks)
+@@ -706,6 +706,7 @@
+     ModeOverride: 0
+     LensShift: {x: 0, y: 0}
+     GateFit: 2
++    m_SensorSize: {x: 2.0639386, y: 1}
+   m_Transitions:
+     m_BlendHint: 0
+     m_InheritPosition: 0
