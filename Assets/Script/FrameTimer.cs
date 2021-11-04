@@ -22,15 +22,12 @@ public class FrameTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (mv2.currentXAngle < 30)
-        {
-            Invoke("countTime.time{0}", Time.time);
-            // countTimeに、ゲームが開始してからの秒数を格納
-            countTime += Time.deltaTime;
+        Invoke("countTime.time{0}", Time.time);
+        // countTimeに、ゲームが開始してからの秒数を格納
+        countTime += Time.deltaTime;
 
-            // 小数2桁にして表示
-            GetComponent<Text>().text = countTime.ToString("F2");
-        }
+        // 小数2桁にして表示
+        GetComponent<Text>().text = countTime.ToString("F2");
 
 
     }
