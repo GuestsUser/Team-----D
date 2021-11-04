@@ -12,6 +12,11 @@ public class MoveGround2 : MonoBehaviour
     //GameObjectのX軸方向の角度を取得
    public  float currentXAngle;
 
+    //左右キーの入力を取得する変数
+    public float horizontal;
+    //上下キーの入力を取得する変数
+    public float vertical;
+
     void Start()
     {
         currentZAngle = transform.eulerAngles.z;
@@ -23,9 +28,9 @@ public class MoveGround2 : MonoBehaviour
     {
 
         // 左右キーの入力を取得
-        float horizontal = Input.GetAxis("Horizontal")*-1;
+         horizontal = Input.GetAxis("Horizontal")*-1;
         //上下キーの入力を取得
-        float vertical = Input.GetAxis("Vertical");
+         vertical = Input.GetAxis("Vertical");
 
         currentZAngle = transform.eulerAngles.z;
         currentXAngle = transform.eulerAngles.x;
