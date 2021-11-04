@@ -19,7 +19,7 @@ public class CoinPlaceStage1 : MonoBehaviour
         {
             float angle = 360 / PLACE * i * Mathf.Deg2Rad;
             GameObject obj = Instantiate(coin);
-            obj.transform.position = new Vector3(radius * Mathf.Cos(angle), obj.transform.localScale.y*0.5f, radius * Mathf.Sin(angle));
+            obj.transform.position = new Vector3(radius * Mathf.Cos(angle), obj.transform.localScale.y, radius * Mathf.Sin(angle));
             obj.transform.Rotate(345,320,54);
             obj.transform.parent = transform;
         }
