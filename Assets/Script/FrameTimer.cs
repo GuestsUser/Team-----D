@@ -16,7 +16,7 @@ public class FrameTimer : MonoBehaviour
     void Start()
     {
         mv2 = ground.GetComponent<MoveGround2>();
-        Invoke("Update", 4.0f);
+    
     }
 
     // Update is called once per frame
