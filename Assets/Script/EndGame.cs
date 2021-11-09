@@ -12,7 +12,7 @@ public class EndGame : MonoBehaviour
 
     private IEnumerator Timer()
     {
-        yield return new WaitForSeconds(1.0f);
+       yield return new WaitForSecondsRealtime(1.0f);
 
         Application.Quit();
     }

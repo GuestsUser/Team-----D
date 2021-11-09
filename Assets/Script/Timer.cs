@@ -7,10 +7,11 @@ public class Timer : MonoBehaviour
 {
     [SerializeField]
     private Text _textCountdown;
+    [SerializeField]
+    private Text _textTimer;
 
 
 
-  
     void Start()
     {
         _textCountdown.text = "";
@@ -29,7 +30,7 @@ public class Timer : MonoBehaviour
         _textCountdown.gameObject.SetActive(true);
 
         _textCountdown.text = "";
-        Time.timeScale = 0;
+       // Time.timeScale = 0;
 
 
         _textCountdown.text = "3";
@@ -47,12 +48,13 @@ public class Timer : MonoBehaviour
         _textCountdown.text = "";
         Time.timeScale = 1f;
         _textCountdown.gameObject.SetActive(false);
+        _textTimer.gameObject.SetActive(true);
 
     }
 
   public   void OnEnable()
     {
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
    public  void OnDisable()
     {

@@ -48,10 +48,11 @@ public class UI_pause : MonoBehaviour
 
             pauseUI.SetActive(!pauseUI.activeSelf);
             i = (i + 1) % 2;
+            if (pauseUI.activeSelf) { Time.timeScale = 0f; }
+            else { Time.timeScale = 1f; }
         }
 
-        if (pauseUI.activeSelf) { Time.timeScale = 0f; }
-        else { Time.timeScale = 1f; }
+       
 
         if (i == 1)
         {
