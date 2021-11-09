@@ -19,8 +19,8 @@ public class LigitBody : MonoBehaviour
 
     void FixedUpdate()
     {
-        force += Physics.gravity;//プロパティの重力は力の値にどう加えるのが正しいかTestに新しいシーンを作ってテストしてみたい
-        transform.position+=force* Time.deltaTime;
+        force += Physics.gravity * Time.deltaTime;//プロパティの重力は力の値にどう加えるのが正しいかTestに新しいシーンを作ってテストしてみたい
+        transform.position+=force * Time.deltaTime;
         //衝突判定から
     }
 }
