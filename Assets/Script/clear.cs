@@ -29,7 +29,10 @@ class clear : MonoBehaviour
             {
 
                 gameClearMessage.text = "Game Clear"; // 追加
-
+                if (step_time >= 3.0f)
+                {
+                    SceneManager.LoadScene("result");
+                }
 
                 audioSource.Play();
                 clearsound = true;
@@ -37,10 +40,7 @@ class clear : MonoBehaviour
                 Time.timeScale = 0f;
                 clearUI.SetActive(false);
                 
-                if (step_time >= 3.0f)
-                {
-                    SceneManager.LoadScene("result");
-                }
+                
             }
     }
 }
