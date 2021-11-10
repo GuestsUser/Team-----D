@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//スローでRigidBodyの挙動を確認してみた所接触があった際めり込んだ後跳ね返った
+//なのでCollisionEnter内では力だけ変えて座標更新は行わない
+
 public class LigitBody : MonoBehaviour
 {
 
@@ -14,7 +17,7 @@ public class LigitBody : MonoBehaviour
 
     void Start()
     {
-        
+        //Time.timeScale = 0.1f;
     }
 
     void FixedUpdate()
@@ -22,5 +25,10 @@ public class LigitBody : MonoBehaviour
         force += Physics.gravity * Time.deltaTime;//プロパティの重力は力の値にどう加えるのが正しいかTestに新しいシーンを作ってテストしてみたい
         transform.position+=force * Time.deltaTime;
         //衝突判定から
+    }
+    void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("hit");
+        force *= -1;
     }
 }
