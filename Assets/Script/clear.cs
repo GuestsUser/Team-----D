@@ -37,7 +37,7 @@ class clear : MonoBehaviour
                 Time.timeScale = 0f;
                 clearUI.SetActive(false);
                 
-                if (step_time >= 17.0f)
+                if (step_time >= 3.0f)
                 {
                     SceneManager.LoadScene("result");
                 }

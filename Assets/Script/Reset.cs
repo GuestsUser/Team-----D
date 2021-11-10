@@ -16,6 +16,6 @@ public class Reset : MonoBehaviour
 // Update is called once per frame
 void Update()
     {
-        
+        Time.timeScale = 1f;
     }
 }
