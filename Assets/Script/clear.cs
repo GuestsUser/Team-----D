@@ -11,36 +11,39 @@ class clear : MonoBehaviour
     Transform myTransform;
     bool clearsound = false;
     private float step_time = 0;
+    
 
     void Start()
     {
         audioSource = this.gameObject.GetComponent<AudioSource>();
         myTransform = transform;
-
+       
     }
 
     void Update()
     {
-        step_time += Time.deltaTime;
-
-        if (!clearsound)
-            if (myTransform.childCount == 0)
-
+        if (myTransform.childCount == 0)
+            
+        {
+           
+            if (Input.GetKeyDown("joystick button 2"))
             {
+                SceneManager.LoadScene("result");
+            }
 
-                gameClearMessage.text = "Game Clear"; // 追加
-                if (step_time >= 3.0f)
-                {
-                    SceneManager.LoadScene("result");
-                }
-
+            if (!clearsound)
+            {
+                gameClearMessage.text = "Game Clear!  Xキーを押してください"; // 追加
+                Time.timeScale = 0f;
                 audioSource.Play();
                 clearsound = true;
-
-                Time.timeScale = 0f;
+                
+                
                 clearUI.SetActive(false);
-                
-                
+                Time.timeScale = 0f;
             }
+           
+
+        }
     }
 }
