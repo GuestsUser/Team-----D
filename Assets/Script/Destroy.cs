@@ -1,12 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Destroy : MonoBehaviour
 {
+    private int score;
+    public Text scoreText;
     public AudioClip clip;
-   // public GameObject particleObject;
-
+    // public GameObject particleObject;
+     void Start()
+    {
+        score = 0;
+        //SetCountText();
+    }
     void OnTriggerEnter(Collider hit)
     {
         if (hit.CompareTag("Ball"))
@@ -14,6 +21,11 @@ public class Destroy : MonoBehaviour
            // Instantiate(particleObject, this.transform.position, Quaternion.identity);
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(clip, transform.position);
-        }
+            //score = score + 1;
+           // SetCountText();
+        
+
+    }
+       
     }
 }

@@ -19,5 +19,6 @@ public class SE: MonoBehaviour
     {
         SceneManager.LoadScene("GameMain");
         SceneManager.LoadScene("Title");
+        SceneManager.LoadScene("result");
     }
 }

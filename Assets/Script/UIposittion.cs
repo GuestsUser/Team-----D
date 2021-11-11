@@ -16,5 +16,7 @@ public class UIposittion : MonoBehaviour
     {
         selectedObj = eventSystem.currentSelectedGameObject.gameObject;
         transform.position = new Vector3(transform.position.x, selectedObj.transform.position.y, transform.position.z);
+       
     }
+   
 }
