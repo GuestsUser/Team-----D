@@ -16,13 +16,13 @@ public class FrameTimer : MonoBehaviour
     void Start()
     {
         mv2 = ground.GetComponent<MoveGround2>();
-        Invoke("Update", 4.0f);
+        //Invoke("Update", 4.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Invoke("countTime.time{0}", Time.time);
+        //Invoke("countTime.time{0}", Time.time);
         // countTimeに、ゲームが開始してからの秒数を格納
         countTime += Time.deltaTime;
 

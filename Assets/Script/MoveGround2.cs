@@ -17,6 +17,9 @@ public class MoveGround2 : MonoBehaviour
     //上下キーの入力を取得する変数
     public float vertical;
 
+    int bkc_count;
+
+
     void Start()
     {
         currentZAngle = transform.eulerAngles.z;
@@ -26,6 +29,7 @@ public class MoveGround2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //int p = 20;
 
         // 左右キーの入力を取得
          horizontal = Input.GetAxis("Horizontal")*-1;
@@ -47,7 +51,7 @@ public class MoveGround2 : MonoBehaviour
         {
             if (currentXAngle < 30)
             {
-                x += Time.deltaTime * 20;
+                x += Time.deltaTime * 20;//90f
                 
             }
             else
@@ -59,15 +63,33 @@ public class MoveGround2 : MonoBehaviour
         //上ボタンがが押されていないかつ、現在のX軸の角度が0より大きい時に傾きを0度に戻す処理
         if (vertical == 0&&currentXAngle>0)
         {
-            if (currentXAngle > 0.1)
+            //for(int i = 0; i < 5; i++)
+            //{
+            //    x += Time.deltaTime * p;
+            //    p -= 5;
+
+            //}
+
+            if (bkc_count<1)
             {
-                x += Time.deltaTime * -30;
+                StartCoroutine("BackCurrent");
+                
             }
-            else
+            bkc_count++;
+
+            if (currentXAngle > 0.1&&bkc_count>60)
             {
-                x = 0;
+                x += Time.deltaTime * -30;//60f
             }
+            //else
+            //{
+            //    x = 0;
+            //}
             transform.rotation = Quaternion.Euler(x, 0, z);
+        }
+        else
+        {
+            bkc_count = 0;
         }
 
 
@@ -161,6 +183,25 @@ public class MoveGround2 : MonoBehaviour
             }
             transform.rotation = Quaternion.Euler(x, 0, z);
         }
+    }
+    IEnumerator BackCurrent()
+    {
+        float p = 20;
 
+        //ここに処理を書く
+        for (int i = 0; i < 60; i++)
+        {
+            
+            x += Time.deltaTime * p;
+            p = p-20f/60f;
+
+            transform.rotation = Quaternion.Euler(x, 0, z);
+
+            yield return null;
+            Debug.Log(p);
+
+        }
+
+        //ここに再開後の処理を書く
     }
 }
