@@ -72,5 +72,5 @@ public class MoveGround3 : MonoBehaviour
 
     }
 
-    void  
+    //void  
 }

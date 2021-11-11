@@ -980,7 +980,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7557003, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1047,7 +1047,6 @@ GameObject:
   - component: {fileID: 413457127}
   - component: {fileID: 413457129}
   - component: {fileID: 413457130}
-  - component: {fileID: 413457131}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1103,18 +1102,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ea60fee10b5e7f40a092d38b9944df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &413457131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413457126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e231254f38d06d41ad14195c3da8a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &475750985
@@ -2238,7 +2225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 1184299571}
   coin: {fileID: 4044507637553934005, guid: 82de53906e174b34099122330e28d4a2, type: 3}
-  radius: 1.54
+  radius: 5
 --- !u!4 &1598394167
 Transform:
   m_ObjectHideFlags: 0
