@@ -60,7 +60,7 @@ public class MoveGround3 : MonoBehaviour
     //        yield return null;
     //    }
     //}
-    int Up()
+    void Up()
     {
 
         if (count <= 90)
@@ -70,6 +70,7 @@ public class MoveGround3 : MonoBehaviour
         }
         count++;
 
-        return 0;
     }
+
+    void  
 }
