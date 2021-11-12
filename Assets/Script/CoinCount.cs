@@ -21,6 +21,8 @@ public class CoinCount : MonoBehaviour
     {
         coin_max= coin_place_obj.transform.childCount;
         coin_count = coin_max;
+        PlayerPrefs.SetInt("coin_max",coin_max);//今回のステージのコイン最大数を保存
+
         st = "/" + coin_max;
         GetComponent<Text>().text = (coin_max - coin_count) + st;
     }
