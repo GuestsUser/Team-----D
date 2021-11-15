@@ -18,12 +18,12 @@ public class Effect : MonoBehaviour
 		GameObject.Find("").transform.position = this.transform.position;
 	}
 
-	void LateUpdate()
-    {
-		if (targetpos)
-		{
-			//パーティクルを再生する
-			particle.Play();
-		}
-	}
+	//void LateUpdate()
+ //   {
+	//	if (targetpos)
+	//	{
+	//		//パーティクルを再生する
+	//		particle.Play();
+	//	}
+	//}
 }
