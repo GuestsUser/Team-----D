@@ -5,27 +5,32 @@ using UnityEngine.UI;
 
 public class Destroy : MonoBehaviour
 {
-    private int score;
+    
     public Text scoreText;
     public AudioClip clip;
-    // public GameObject particleObject;
-     void Start()
+    private int score;
+    void Start()
     {
         score = 0;
-        //SetCountText();
+        SetCountText();
+    }
+
+    void SetCountText()
+    {
+        // スコアの表示を更新
+        scoreText.text = "Count: " + score.ToString();
     }
     void OnTriggerEnter(Collider hit)
     {
         if (hit.CompareTag("Ball"))
         {
-           // Instantiate(particleObject, this.transform.position, Quaternion.identity);
+            // Instantiate(particleObject, this.transform.position, Quaternion.identity);
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(clip, transform.position);
-            //score = score + 1;
-           // SetCountText();
-        
+            score = score + 1;
+          SetCountText();
 
+
+        }
+      }
     }
-       
-    }
-}
