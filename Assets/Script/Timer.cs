@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         _textCountdown.text = "";
-
+        
         StartCoroutine(CountdownCoroutine());
     }
 
@@ -34,6 +34,7 @@ public class Timer : MonoBehaviour
 
 
         _textCountdown.text = "3";
+        
         yield return new WaitForSeconds(1.0f);
 
         _textCountdown.text = "2";
