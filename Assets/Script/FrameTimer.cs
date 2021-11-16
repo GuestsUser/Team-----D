@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FrameTimer : MonoBehaviour
 {
-    float countTime = 0;
+    float countTime;
 
     [SerializeField]
     GameObject ground;
@@ -15,8 +15,9 @@ public class FrameTimer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+       
         mv2 = ground.GetComponent<MoveGround2>();
-        //Invoke("Update", 4.0f);
+        
     }
 
     // Update is called once per frame
@@ -28,6 +29,8 @@ public class FrameTimer : MonoBehaviour
 
         // 小数2桁にして表示
         GetComponent<Text>().text = countTime.ToString("F2");
+        PlayerPrefs.SetFloat("time_max",countTime);
+        
 
 
     }
